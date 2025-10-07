@@ -1,0 +1,36 @@
+{
+  "name": "@nlevchuk/tg-misc",
+  "version": "1.0.0",
+  "description": "A tiny plugin for applications built using the Grammy package",
+  "author": "Nikita Levchuk <code@levch.uk>",
+  "license": "MIT",
+  "repository": {
+    "url": "git+https://github.com/nlevchuk/tg-misc.git"
+  },
+  "main": "build/index.js",
+  "packageManager": "pnpm@9.9.0",
+  "type": "module",
+  "files": ["build"],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "pnpm build"
+  },
+  "keywords": [
+    "ai",
+    "telegram",
+    "plugin"
+  ],
+  "devDependencies": {
+    "@grammyjs/types": "^3.22.2",
+    "@types/node": "^22.7.4",
+    "grammy": "^1.38.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  },
+  "peerDependencies": {
+    "grammy": ">=1.38 <2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
