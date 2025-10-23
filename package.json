@@ -1,6 +1,6 @@
 {
   "name": "@nlevchuk/tg-misc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tiny plugin for applications built using the Grammy package",
   "author": "Nikita Levchuk <code@levch.uk>",
   "license": "MIT",
