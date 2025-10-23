@@ -2,16 +2,19 @@ import type { Context } from 'grammy'
 import type { Message } from '@grammyjs/types'
 
 export function getMainText(
-  message: Message.TextMessage | Message.CaptionableMessage
+  message?: Message.TextMessage | Message.CaptionableMessage
 ): string {
+  if (!message) {
+    return '';
+  }
   return 'text' in message ? message.text : message.caption;
 }
 
-export function getQuoteText(message: Message.CommonMessage): string {
+export function getQuoteText(message?: Message.CommonMessage): string {
   return message?.quote?.text;
 }
 
-export function getReplyText(message: Message.CommonMessage): string {
+export function getReplyText(message?: Message.CommonMessage): string {
   return message?.reply_to_message?.text;
 }
 
