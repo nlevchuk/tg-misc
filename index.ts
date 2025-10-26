@@ -22,6 +22,6 @@ export function getReplyText(
   return message?.reply_to_message?.text;
 }
 
-export function getStringifiedCommandArgument(ctx: Context): string {
-  return String(ctx.match);
+export function getStringifiedCommandArgument({ match }: Context): string | undefined {
+  return (typeof match === 'string') ? match : undefined;
 }
